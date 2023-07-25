@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+<!--    justify-content: center;-->
+    align-items: flex-start;
+    align-content: flex-end;
+<!--    width:90%;-->
+    background-color: #2f1d58;
+<!--    height: 65%;-->
+    overflow: auto;
+    flex-direction: row;
+
+}
+    </style>
+</head>
+<body>
+<section >
+{% for st in stat %}
+    <div style=" border-style: solid;">
+    <p >Name : {{st.Name}}</p><br>
+<p>Email : {{st.Email}}</p><br>
+    <p>Contact_No : {{st.Contact_No}}</p><br>
+<p>Check_In : {{st.Check_In}}</p><br>
+    </div>
+{% endfor %}
+</section>
+</body>
+</html>

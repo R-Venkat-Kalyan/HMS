@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+	{% extends 'base.html' %}
+{% load static %}
+<html>
+	<head>
+		<title>Registration</title>
+		<link rel="stylesheet" >
+		{%block css%}
+.bg{
+
+	margin:0;
+	padding:0;
+	background:url("../static/Images/bg.jpg");
+	background-size:cover;
+	font-family: sans-serif;
+}
+
+.loginBox
+{
+	position:absolute;
+	top:70%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:absolute;
+	height:610px;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background:rgba(1,0.5,0.5,0.5) ;
+
+}
+
+
+
+h2
+{
+	margin:0;
+	padding:0 0 20px;
+	color:#1E90FF;
+	text-align:center;
+}
+
+
+
+.loginBox p
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	color:#fff;
+
+}
+
+
+.loginBox input
+{
+	width:100%;
+	margin-bottom: 20px;
+}
+
+.loginBox input[type="text"], .loginBox input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size: 16px;
+
+
+}
+
+
+.loginBox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height: 40px;
+	color:#fff;
+	font-size:16px;
+	background: rgb(255,38,126);
+	cursor:pointer;
+	border-radius:20px;
+}
+
+
+.loginBox input[type="submit"]:hover
+{
+	background: #efed40;
+	color: #262626;
+}
+
+
+
+
+.loginBox a
+{
+	color: #fff;
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+::placeholder
+{
+	color:rgba(255,255,255,0.5);
+}
+
+
+.user
+{
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+	border-radius:50%;
+}
+
+		{%endblock%}
+	</head>
+{% block body %}
+
+
+<div class="bg" >
+	<div class="gap">
+	<div class="loginBox">
+
+
+		<img src="../static/Images/loginform_logo.jpg" class="user">
+		<h2>Register Here</h2>
+		<form action="" method="POST">
+			{% csrf_token %}
+            <p>First Name</p>
+            <input type="text" name = "fn" placeholder="Enter First Name">
+            <p>Last Name</p>
+            <input type="text" name = "ln" placeholder="Enter Second   Name">
+			<p>Email</p>
+			<input type="text" name = "em" placeholder="Enter Email">
+			<p>Password</p>
+			<input type="password" name = "pwd" placeholder="Enter Password">
+            <p>Re-enter Your Password</p>
+			<input type="text" name = "re" placeholder="Re-enter your Password">
+			<input type="submit" name = "" value="Register" onclick="prompt()">
+<!--			<a href="#"> Forget Password</a>-->
+
+		</form>
+	</div>
+
+		</div>
+	</div>
+	   <script>
+     function prompt(){
+     alert("Registered Successfull..\nClick Login To Continue..")
+<!--     alert("")-->
+     }
+    </script>
+	{% endblock %}
+
+</html>

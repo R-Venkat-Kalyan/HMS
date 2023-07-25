@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback Handle {% endblock %}
+
+{% block css %}  {% endblock %}
+
+{% block body %}
+
+{% for com in comments %}
+Email:{{com.e_mail}}<br>
+FeedBack:{{com.comments}}<br>
+{% endfor %}
+
+ {% endblock %}
