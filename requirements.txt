@@ -33,7 +33,6 @@ Pygments==2.15.1
 PyInquirer==1.0.3
 pytest==7.2.1
 python-magic==0.4.27
-python-magic-bin==0.4.14
 pywin32==306
 regex==2023.6.3
 reportlab==4.0.4
